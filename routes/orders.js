@@ -13,6 +13,6 @@ router.post('/', validation.saveOrder, Controller.createOrder);
 
 // router.put('/:id', validation., Controller.update)
 
-// router.delete('/:id', Controller.delete);
+router.delete('/:id', Controller.deleteOrder);
 
 module.exports = router;

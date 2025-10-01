@@ -12,6 +12,6 @@ router.post('/', validation.saveComment, Controller.createComment);
 
 // router.put('/:id', validation., Controller.update)
 
-// router.delete('/:id', Controller.delete);
+router.delete('/:id', Controller.deleteComment);
 
 module.exports = router;

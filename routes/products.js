@@ -13,6 +13,6 @@ router.post('/', validation.saveProduct, Controller.createProduct);
 
 // router.put('/:id', validation., Controller.update)
 
-// router.delete('/:id', Controller.delete);
+router.delete('/:id', Controller.deleteProduct);
 
 module.exports = router;
