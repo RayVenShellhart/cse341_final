@@ -1,14 +1,15 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "CSE341 Final API",
-    "description": "API for managing users, products, comments, and orders",
+    "title": " Api",
+    "description": " Api",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/": {
