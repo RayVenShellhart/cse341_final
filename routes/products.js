@@ -7,11 +7,11 @@ const { isAuthenticated } = require('../middleware/authenticate')
 
 router.get('/', Controller.getAllProducts);
 
-// router.get('/:id', gamesController.getSingle);
+router.get('/:id', Controller.getSingleProduct);
 
 router.post('/', isAuthenticated ,validation.saveProduct, Controller.createProduct);
 
-// router.put('/:id', isAuthenticated ,validation., Controller.update)
+router.put('/:id', validation.saveProduct, Controller.updateProduct);
 
 router.delete('/:id', isAuthenticated ,Controller.deleteProduct);
 

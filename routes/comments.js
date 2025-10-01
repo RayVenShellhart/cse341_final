@@ -6,11 +6,11 @@ const { isAuthenticated } = require('../middleware/authenticate')
 
 router.get('/', Controller.getAllComments);
 
-// router.get('/:id', gamesController.getSingle);
+router.get('/:id', Controller.getSingleComment);
 
 router.post('/', isAuthenticated , validation.saveComment, Controller.createComment);
 
-// router.put('/:id', isAuthenticated ,validation., Controller.update)
+router.put('/:id', validation.saveComment, Controller.updateComment);
 
 router.delete('/:id', isAuthenticated , Controller.deleteComment);
 
