@@ -3,16 +3,16 @@ const router = express.Router();
 
 const Controller = require('../controllers/orders')
 const validation = require('../middleware/validate');
-
+const { isAuthenticated } = require('../middleware/authenticate')
 
 router.get('/', Controller.getAllOrders);
 
-// router.get('/:id', gamesController.getSingle);
+// router.get('/:id', Controller.getSingle);
 
-router.post('/', validation.saveOrder, Controller.createOrder);
+router.post('/', isAuthenticated ,validation.saveOrder, Controller.createOrder);
 
-// router.put('/:id', validation., Controller.update)
+// router.put('/:id', isAuthenticated ,validation., Controller.update)
 
-router.delete('/:id', Controller.deleteOrder);
+router.delete('/:id', isAuthenticated ,Controller.deleteOrder);
 
 module.exports = router;
