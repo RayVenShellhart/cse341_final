@@ -7,11 +7,11 @@ const validation = require('../middleware/validate');
 
 router.get('/', Controller.getAllOrders);
 
-// router.get('/:id', gamesController.getSingle);
+router.get('/:id', Controller.getSingleOrder);
 
 router.post('/', validation.saveOrder, Controller.createOrder);
 
-// router.put('/:id', validation., Controller.update)
+router.put('/:id', validation.saveOrder, Controller.updateOrder);
 
 // router.delete('/:id', Controller.delete);
 

@@ -6,11 +6,11 @@ const validation = require('../middleware/validate');
 
 router.get('/', Controller.getAllComments);
 
-// router.get('/:id', gamesController.getSingle);
+router.get('/:id', Controller.getSingleComment);
 
 router.post('/', validation.saveComment, Controller.createComment);
 
-// router.put('/:id', validation., Controller.update)
+router.put('/:id', validation.saveComment, Controller.updateComment);
 
 // router.delete('/:id', Controller.delete);
 
