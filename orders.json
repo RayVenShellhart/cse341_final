@@ -1,0 +1,47 @@
+[
+    {
+        "order_id": "1001",
+        "user_id": "001",
+        "product_id": "001",
+        "quantity": "1",
+        "total_price": "199.99",
+        "order_date": "09/28/2025",
+        "status": "delivered"
+    },
+    {
+        "order_id": "1002",
+        "user_id": "002",
+        "product_id": "002",
+        "quantity": "2",
+        "total_price": "159.98",
+        "order_date": "09/26/2025",
+        "status": "shipped"
+    },
+    {
+        "order_id": "1003",
+        "user_id": "003",
+        "product_id": "005",
+        "quantity": "1",
+        "total_price": "59.99",
+        "order_date": "09/25/2025",
+        "status": "processing"
+    },
+    {
+        "order_id": "1004",
+        "user_id": "004",
+        "product_id": "004",
+        "quantity": "1",
+        "total_price": "149.99",
+        "order_date": "09/20/2025",
+        "status": "delivered"
+    },
+    {
+        "order_id": "1005",
+        "user_id": "005",
+        "product_id": "003",
+        "quantity": "1",
+        "total_price": "499.99",
+        "order_date": "09/18/2025",
+        "status": "delivered"
+    }
+]

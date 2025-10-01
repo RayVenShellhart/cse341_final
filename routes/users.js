@@ -1,15 +1,15 @@
 const express = require('express');
-const router = express.Router(); 
+const router = express.Router();
 
-const Controller = require('../controllers/')
+const Controller = require('../controllers/users')
 const validation = require('../middleware/validate');
 
 
-// router.get('/', Controller.getAll);
+router.get('/', Controller.getAllUsers);
 
 // router.get('/:id', gamesController.getSingle);
 
-// router.post('/',  validation., Controller.create);
+router.post('/', Controller.createUser);
 
 // router.put('/:id', validation., Controller.update)
 

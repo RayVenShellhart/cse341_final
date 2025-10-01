@@ -1,0 +1,37 @@
+[
+    {
+        "user_id": "001",
+        "username": "Jane_NOT_Doe",
+        "join_date": "01/15/2023",
+        "location": "Seattle, WA",
+        "bio": "Music enthusiast and part-time reviewer. Audiophile since 2010."
+    },
+    {
+        "user_id": "002",
+        "username": "techguy92",
+        "join_date": "06/02/2022",
+        "location": "Austin, TX",
+        "bio": "Gadget lover, coder, and coffee addict."
+    },
+    {
+        "user_id": "003",
+        "username": "soundSnob",
+        "join_date": "03/18/2024",
+        "location": "New York, NY",
+        "bio": "Studio engineer with a passion for high-fidelity audio gear."
+    },
+    {
+        "user_id": "004",
+        "username": "noisyOffice",
+        "join_date": "11/09/2023",
+        "location": "Chicago, IL",
+        "bio": "Trying to survive open office noise. Headphone reviews incoming."
+    },
+    {
+        "user_id": "005",
+        "username": "happyCustomer",
+        "join_date": "08/25/2022",
+        "location": "Denver, CO",
+        "bio": "Just here to leave honest reviews and help others shop smart."
+    }
+]

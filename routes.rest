@@ -1,0 +1,30 @@
+### Get all
+GET http://localhost:3000/comments
+
+### Create info
+
+POST http://localhost:3000/comments HTTP/1.1
+content-type: application/json
+
+{
+    "user_id": "008",
+    "username": "loserVill",
+    "rating": "3",
+    "comment": "Eh, could be better, m8",
+    "date_posted": "09/04/2025"
+}
+
+### Update/Replace info
+PUT http://localhost:3000/comments/68cb24d932df5f61bf59d24d HTTP/1.1
+content-type: application/json
+
+{
+}
+
+
+### Update/Replace info
+PUT http://localhost:3000/comments/68cb24d932df5f61bf59d24d HTTP/1.1
+content-type: application/json
+
+{
+}
