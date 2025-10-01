@@ -13,6 +13,6 @@ router.post('/', validation.saveUser, Controller.createUser);
 
 // router.put('/:id', validation., Controller.update)
 
-// router.delete('/:id', Controller.delete);
+router.delete('/:id', Controller.deleteUser);
 
 module.exports = router;

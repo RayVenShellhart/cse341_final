@@ -44,8 +44,26 @@ const createProduct = async (req, res) => {
 };
 
 // DELETE - Rebecca
+const deleteProduct = async (req, res) => {
+    //#swagger.tags=['Products - Delete Product']
+    try {
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).json('Must use a valid product id to delete a product.');
+        }
+        const productId = new ObjectId(req.params.id);
+        const result = await mongodb.getDatabase().collection('products').deleteOne({ _id: productId });
+        if (result.deletedCount > 0) {
+            return res.status(201).json({ message: 'Product deleted successfully', productId: result.insertedId });
+        } else {
+            res.status(500).json(result.error || 'Error occured deleting product.');
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+};
 
 module.exports = {
     getAllProducts,
-    createProduct
+    createProduct,
+    deleteProduct
 }
