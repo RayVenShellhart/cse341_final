@@ -30,7 +30,7 @@ const getSingleProduct = async (req, res) => {
     }
 };
 
-// PUT - RayVen
+// PUT - Joel
 const updateProduct = async (req, res) => {
     //#swagger.tags=['Products - Update Product']
     try {

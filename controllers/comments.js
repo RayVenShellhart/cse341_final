@@ -30,7 +30,7 @@ const getSingleComment = async (req, res) => {
     }
 };
 
-// PUT - RayVen
+// PUT - Joel
 const updateComment = async (req, res) => {
     //#swagger.tags=['Comments - Update Comment']
     try {

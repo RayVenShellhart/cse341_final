@@ -30,7 +30,7 @@ const getSingleUser = async (req, res) => {
     }
 };
 
-// PUT - RayVen
+// PUT - Joel
 const updateUser = async (req, res) => {
     //#swagger.tags=['Users - Update User']
     try {

@@ -30,7 +30,7 @@ const getSingleOrder = async (req, res) => {
     }
 };
 
-// PUT - RayVen
+// PUT - Joel
 const updateOrder = async (req, res) => {
     //#swagger.tags=['Orders - Update Order']
     try {
