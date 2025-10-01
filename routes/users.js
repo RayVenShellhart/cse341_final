@@ -9,7 +9,7 @@ router.get('/', Controller.getAllUsers);
 
 // router.get('/:id', gamesController.getSingle);
 
-router.post('/', Controller.createUser);
+router.post('/', validation.saveUser, Controller.createUser);
 
 // router.put('/:id', validation., Controller.update)
 

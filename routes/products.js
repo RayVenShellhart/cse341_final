@@ -9,7 +9,7 @@ router.get('/', Controller.getAllProducts);
 
 // router.get('/:id', gamesController.getSingle);
 
-router.post('/', Controller.createProduct);
+router.post('/', validation.saveProduct, Controller.createProduct);
 
 // router.put('/:id', validation., Controller.update)
 

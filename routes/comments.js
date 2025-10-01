@@ -8,7 +8,7 @@ router.get('/', Controller.getAllComments);
 
 // router.get('/:id', gamesController.getSingle);
 
-router.post('/', Controller.createComment);
+router.post('/', validation.saveComment, Controller.createComment);
 
 // router.put('/:id', validation., Controller.update)
 
