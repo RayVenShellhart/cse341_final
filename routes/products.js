@@ -9,10 +9,10 @@ router.get('/', Controller.getAllProducts);
 
 router.get('/:id', Controller.getSingleProduct);
 
-router.post('/', isAuthenticated ,validation.saveProduct, Controller.createProduct);
+router.post('/', isAuthenticated, validation.saveProduct, Controller.createProduct);
 
-router.put('/:id', validation.saveProduct, Controller.updateProduct);
+router.put('/:id', isAuthenticated, validation.saveProduct, Controller.updateProduct);
 
-router.delete('/:id', isAuthenticated ,Controller.deleteProduct);
+router.delete('/:id', isAuthenticated, Controller.deleteProduct);
 
 module.exports = router;

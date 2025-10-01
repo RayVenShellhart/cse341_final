@@ -8,10 +8,10 @@ router.get('/', Controller.getAllComments);
 
 router.get('/:id', Controller.getSingleComment);
 
-router.post('/', isAuthenticated , validation.saveComment, Controller.createComment);
+router.post('/', isAuthenticated, validation.saveComment, Controller.createComment);
 
-router.put('/:id', validation.saveComment, Controller.updateComment);
+router.put('/:id', isAuthenticated, validation.saveComment, Controller.updateComment);
 
-router.delete('/:id', isAuthenticated , Controller.deleteComment);
+router.delete('/:id', isAuthenticated, Controller.deleteComment);
 
 module.exports = router;

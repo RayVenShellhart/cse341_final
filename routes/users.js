@@ -9,10 +9,10 @@ router.get('/', Controller.getAllUsers);
 
 router.get('/:id', Controller.getSingleUser);
 
-router.post('/', isAuthenticated ,validation.saveUser, Controller.createUser);
+router.post('/', isAuthenticated, validation.saveUser, Controller.createUser);
 
-router.put('/:id', validation.saveUser, Controller.updateUser);
+router.put('/:id', isAuthenticated, validation.saveUser, Controller.updateUser);
 
-router.delete('/:id', isAuthenticated ,Controller.deleteUser);
+router.delete('/:id', isAuthenticated, Controller.deleteUser);
 
 module.exports = router;
