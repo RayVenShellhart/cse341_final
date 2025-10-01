@@ -1,0 +1,37 @@
+[
+    {
+        "user_id": "001",
+        "username": "Jane_NOT_Doe",
+        "rating": "5",
+        "comment": "Absolutely love these headphones! The noise cancellation is top-notch and the sound quality is crystal clear.",
+        "date_posted": "09/30/2025"
+    },
+    {
+        "user_id": "002",
+        "username": "techguy92",
+        "rating": "4",
+        "comment": "Great value for the price. Battery lasts long, but the ear cups get uncomfortable after a while.",
+        "date_posted": "09/29/2025"
+    },
+    {
+        "user_id": "003",
+        "username": "soundSnob",
+        "rating": "3",
+        "comment": "Decent for casual listening, but not quite up to par for audiophiles.",
+        "date_posted": "09/27/2025"
+    },
+    {
+        "user_id": "004",
+        "username": "noisyOffice",
+        "rating": "1",
+        "comment": "Noise cancellation barely works in my office. Expected better performance.",
+        "date_posted": "09/25/2025"
+    },
+    {
+        "user_id": "005",
+        "username": "happyCustomer",
+        "rating": "5",
+        "comment": "Exceeded my expectations! Lightweight, amazing sound, and reliable Bluetooth connection.",
+        "date_posted": "09/22/2025"
+    }
+]

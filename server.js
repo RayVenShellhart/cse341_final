@@ -64,13 +64,12 @@ app.get('/github/callback', passport.authenticate('github', {
 )
 
 
-mongodb.initDb((err) => { 
+mongodb.initDb((err) => {
     if (err) {
-        console.log(err)
+        console.error('Database connection failed:', err);
+        process.exit(1);
+    } else {
+        console.log('Database connected successfully.');
+        app.listen(port, () => console.log(`Running on port ${port}`));
     }
-    else {
-        app.listen(port, () => (console.log(`Running on port ${port}`)));
-    }
-}
-    
-) 
+});

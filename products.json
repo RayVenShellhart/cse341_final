@@ -1,0 +1,42 @@
+[
+    {
+        "product_id": "001",
+        "product_name": "Wireless Noise Cancelling Headphones",
+        "category": "Electronics",
+        "price": "199.99",
+        "release_date": "07/15/2025",
+        "description": "High-quality over-ear headphones with active noise cancellation and 30-hour battery life."
+    },
+    {
+        "product_id": "002",
+        "product_name": "Smart Fitness Tracker",
+        "category": "Wearables",
+        "price": "79.99",
+        "release_date": "05/10/2025",
+        "description": "Lightweight fitness tracker with heart rate monitor, sleep tracking, and waterproof design."
+    },
+    {
+        "product_id": "003",
+        "product_name": "4K Ultra HD Smart TV 55\"",
+        "category": "Home Entertainment",
+        "price": "499.99",
+        "release_date": "03/22/2025",
+        "description": "55-inch 4K UHD Smart TV with HDR support, voice control, and built-in streaming apps."
+    },
+    {
+        "product_id": "004",
+        "product_name": "Ergonomic Office Chair",
+        "category": "Furniture",
+        "price": "149.99",
+        "release_date": "08/01/2024",
+        "description": "Comfortable office chair with lumbar support, adjustable height, and breathable mesh back."
+    },
+    {
+        "product_id": "005",
+        "product_name": "Portable Bluetooth Speaker",
+        "category": "Audio",
+        "price": "59.99",
+        "release_date": "06/18/2025",
+        "description": "Compact speaker with deep bass, water resistance, and 12-hour battery life."
+    }
+]
