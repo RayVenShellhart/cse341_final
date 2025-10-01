@@ -5,6 +5,7 @@ router.use('/comments', require('./comments'));
 router.use('/users', require('./users'));
 router.use('/products', require('./products'));
 router.use('/orders', require('./orders'));
+const passport = require('passport');
 
 
 router.get('/login', passport.authenticate('github'), (req, res) => { });
