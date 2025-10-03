@@ -173,6 +173,9 @@
           "200": {
             "description": "OK"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "404": {
             "description": "Not Found"
           },
@@ -237,9 +240,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "example": "any"
-                },
                 "user_id": {
                   "example": "any"
                 },
@@ -262,9 +262,6 @@
         "responses": {
           "201": {
             "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -345,6 +342,9 @@
           "200": {
             "description": "OK"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "404": {
             "description": "Not Found"
           },
@@ -409,9 +409,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "product": {
-                  "example": "any"
-                },
                 "product_id": {
                   "example": "any"
                 },
@@ -437,9 +434,6 @@
         "responses": {
           "201": {
             "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -523,6 +517,9 @@
           "200": {
             "description": "OK"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "404": {
             "description": "Not Found"
           },
@@ -587,9 +584,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "order": {
-                  "example": "any"
-                },
                 "order_id": {
                   "example": "any"
                 },
@@ -618,9 +612,6 @@
         "responses": {
           "201": {
             "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"
@@ -706,6 +697,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "404": {
             "description": "Not Found"

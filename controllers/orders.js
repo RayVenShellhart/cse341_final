@@ -64,30 +64,30 @@ const updateOrder = async (req, res) => {
 // POST - Rebecca
 const createOrder = async (req, res) => {
     //#swagger.tags=['Orders - Create Order']
-    try {
-        if (!req.body.order) {
-            return res.status(400).json({ message: 'Missing required fields: order is required.' });
-        }
+  const order = {
+    order_id: req.body.order_id,
+    user_id: req.body.user_id,
+    product_id: req.body.product_id,
+    quantity: req.body.quantity,
+    total_price: req.body.total_price,
+    order_date: req.body.order_date,
+    status: req.body.status
+  };
 
-        const order = {
-            order_id: req.body.order_id,
-            user_id: req.body.user_id,
-            product_id: req.body.product_id,
-            quantity: req.body.quantity,
-            total_price: req.body.total_price,
-            order_date: req.body.order_date,
-            status: req.body.status
-        };
+  try {
+    const response = await mongodb
+      .getDatabase()
+      .collection('orders')
+      .insertOne(order);
 
-        const result = await mongodb.getDatabase().collection('orders').insertOne(order);
-        if (result.acknowledged) {
-            return res.status(201).json({ message: 'Order created successfully', orderId: result.insertedId });
-        } else {
-            res.status(500).json(result.error || 'Error occured creating order.');
-        }
-    } catch (error) {
-        res.status(500).json({ message: 'Server error', error: error.message });
+    if (response.acknowledged) {
+      return res.status(201).json({ id: response.insertedId });
+    } else {
+      res.status(500).json({ message: 'Failed to create Order' });
     }
+  } catch (err) {
+    res.status(500).json({ message: err.message || 'Error creating Order' });
+  }
 };
 
 // DELETE - Rebecca
