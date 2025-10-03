@@ -62,28 +62,28 @@ const updateUser = async (req, res) => {
 // POST - Rebecca
 const createUser = async (req, res) => {
     //#swagger.tags=['Users - Create User']
-    try {
-        if (!req.body.user) {
-            return res.status(400).json({ message: 'Missing required fields: user is required.' });
-        }
+  const user = {
+    user_id: req.body.user_id,
+    username: req.body.username,
+    join_date: req.body.join_date,
+    location: req.body.location,
+    bio: req.body.bio
+  };
 
-        const user = {
-            user_id: req.body.user_id,
-            username: req.body.username,
-            join_date: req.body.join_date,
-            location: req.body.location,
-            bio: req.body.bio
-        };
+  try {
+    const response = await mongodb
+      .getDatabase()
+      .collection('users')
+      .insertOne(user);
 
-        const result = await mongodb.getDatabase().collection('users').insertOne(user);
-        if (result.acknowledged) {
-            return res.status(201).json({ message: 'User created successfully', userId: result.insertedId });
-        } else {
-            res.status(500).json(result.error || 'Error occured creating user.');
-        }
-    } catch (error) {
-        res.status(500).json({ message: 'Server error', error: error.message });
+    if (response.acknowledged) {
+      return res.status(201).json({ id: response.insertedId });
+    } else {
+      res.status(500).json({ message: 'Failed to create User' });
     }
+  } catch (err) {
+    res.status(500).json({ message: err.message || 'Error creating User' });
+  }
 };
 
 // DELETE - Rebecca
