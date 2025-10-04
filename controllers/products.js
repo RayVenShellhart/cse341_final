@@ -4,11 +4,15 @@ const ObjectId = require('mongodb').ObjectId;
 // GET ALL
 const getAllProducts = async (req, res) => {
     //#swagger.tags=['Products - Get All']
+    try {
     const result = await mongodb.getDatabase().collection('products').find();
     result.toArray().then((products) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(products);
     });
+    } catch (err) {
+        res.status(500).json({ message: err.message || 'Error fetching list'})
+    }
 };
 
 // GET SINGLE - Joel

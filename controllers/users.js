@@ -3,12 +3,16 @@ const ObjectId = require('mongodb').ObjectId;
 
 // GET ALL
 const getAllUsers = async (req, res) => {
+    try {
     //#swagger.tags=['Users - Get All']
     const result = await mongodb.getDatabase().collection('users').find();
     result.toArray().then((users) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(users);
     });
+    } catch (err) {
+        res.status(500).json({ message: err.message || 'Error fetching list'})
+    }
 };
 
 // GET SINGLE - Joel

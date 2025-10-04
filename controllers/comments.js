@@ -4,11 +4,15 @@ const ObjectId = require('mongodb').ObjectId;
 // GET ALL
 const getAllComments = async (req, res) => {
     //#swagger.tags=['Comments - Get All']
-    const result = await mongodb.getDatabase().collection('comments').find();
-    result.toArray().then((comments) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(comments);
-    });
+    try {
+        const result = await mongodb.getDatabase().collection('comments').find();
+        result.toArray().then((comments) => {
+            res.setHeader('Content-Type', 'application/json');
+            res.status(200).json(comments);
+        });
+    } catch (err) {
+        res.status(500).json({ message: err.message || 'Error fetching list'})
+    }
 };
 
 // GET SINGLE - Joel
